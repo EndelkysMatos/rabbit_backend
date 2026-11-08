@@ -1,0 +1,149 @@
+{
+  "info": {
+    "_postman_id": "a6ff8caa-6ecf-4de9-9b9b-6a4f9d7f9f0d",
+    "name": "DjangoRabbitServer - Admin Linea",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleccion para pruebas del modulo ADMIN_LINEA."
+  },
+  "item": [
+    {
+      "name": "Admin Linea - List Drivers",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/admin-linea/drivers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "admin-linea",
+            "drivers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin Linea - Create Driver",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Carlos\",\n  \"lastname\": \"Perez\",\n  \"email\": \"driver@example.com\",\n  \"phone\": \"04121110000\",\n  \"password\": \"<contraseña>\",\n  \"image\": \"/media/uploads/users/carlos.png\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/admin-linea/drivers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "admin-linea",
+            "drivers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin Linea - Deactivate Driver",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/admin-linea/drivers/{{driverId}}/deactivate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "admin-linea",
+            "drivers",
+            "{{driverId}}",
+            "deactivate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin Linea - Update Profile",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"phone\": \"04120002222\",\n  \"name\": \"Admin\",\n  \"lastname\": \"San Benito\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/admin-linea/profile",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "admin-linea",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "driverId",
+      "value": ""
+    }
+  ]
+}
