@@ -9,7 +9,7 @@ Este repositorio contiene **únicamente el backend**. La aplicación móvil y el
 ## Enlaces del proyecto
 
 - **Diseño en Figma:** [Ver prototipo en Figma](https://www.figma.com/design/TycvS7GzehRc8mBCVVnrHx/Rabbit?node-id=72-65&t=rsmArw6Ay8rQL1D5-1)
-- **Repositorio Frontend:** [Rabbit Flutter](https://github.com/EndelkysAMS/rabbit_flutter)
+- **Repositorio Frontend:** [Rabbit Flutter](https://github.com/EndelkysMatos/rabbit_flutter)
 
 ---
 
@@ -86,7 +86,7 @@ Antes de ejecutar el proyecto asegúrate de tener instalado:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/EndelkysAMS/rabbit_backend.git
+git clone https://github.com/EndelkysMatos/rabbit_backend.git
 cd rabbit_backend
 ```
 
